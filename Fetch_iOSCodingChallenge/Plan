@@ -1,0 +1,30 @@
+
+
+Plan
+
+
+
+SwiftUI / Combine / MVVM / Singleton / URLSession
+
+- Services
+    - DessertSearchService
+        - fetchDesserts()
+        - fetchDessertDetails(id: String?)
+    
+- Models
+    - Response
+    - Dessert
+
+- Views & ViewModels
+    - DessertViewModel
+        - [Dessert]
+        - Dessert
+        
+    - DessertListView
+        - navigationTitleText: Desserts
+        - dessertList
+        
+    - DesseartDetailView
+        
+
+

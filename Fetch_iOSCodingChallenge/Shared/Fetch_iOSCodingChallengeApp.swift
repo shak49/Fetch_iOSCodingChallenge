@@ -11,7 +11,7 @@ import SwiftUI
 struct Fetch_iOSCodingChallengeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DessertListView()
         }
     }
 }
