@@ -9,9 +9,9 @@ import Foundation
 import Combine
 
 
-class DessertSearchService {
+class DessertService {
     //MARK: - Properties
-    static var shared = DessertSearchService()
+    static var shared = DessertService()
     private var baseURL = "https://themealdb.com/api/json/v1/1/"
     
     //MARK: - Lifecycles
@@ -70,5 +70,4 @@ class DessertSearchService {
             })
             .eraseToAnyPublisher()
     }
-    
 }

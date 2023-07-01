@@ -12,7 +12,7 @@
 		6DB04B6B2A474B2A002D8B60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DB04B592A474B2A002D8B60 /* Assets.xcassets */; };
 		6DB04B6C2A474B2A002D8B60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DB04B592A474B2A002D8B60 /* Assets.xcassets */; };
 		6DB04B772A474D61002D8B60 /* Plan in Resources */ = {isa = PBXBuildFile; fileRef = 6DB04B762A474D61002D8B60 /* Plan */; };
-		6DB04B7B2A475074002D8B60 /* DessertSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB04B7A2A475074002D8B60 /* DessertSearchService.swift */; };
+		6DB04B7B2A475074002D8B60 /* DessertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB04B7A2A475074002D8B60 /* DessertService.swift */; };
 		6DB04B7D2A4750DB002D8B60 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB04B7C2A4750DB002D8B60 /* Response.swift */; };
 		6DB04B802A476D0A002D8B60 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB04B7F2A476D0A002D8B60 /* NetworkError.swift */; };
 		6DB04B822A4BB59F002D8B60 /* DessertListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB04B812A4BB59F002D8B60 /* DessertListView.swift */; };
@@ -27,7 +27,7 @@
 		6DB04B642A474B2A002D8B60 /* Fetch_iOSCodingChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fetch_iOSCodingChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DB04B662A474B2A002D8B60 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		6DB04B762A474D61002D8B60 /* Plan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Plan; sourceTree = "<group>"; };
-		6DB04B7A2A475074002D8B60 /* DessertSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertSearchService.swift; sourceTree = "<group>"; };
+		6DB04B7A2A475074002D8B60 /* DessertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertService.swift; sourceTree = "<group>"; };
 		6DB04B7C2A4750DB002D8B60 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		6DB04B7F2A476D0A002D8B60 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		6DB04B812A4BB59F002D8B60 /* DessertListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertListView.swift; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				6DB04B572A474B28002D8B60 /* Fetch_iOSCodingChallengeApp.swift */,
-				6DB04B7A2A475074002D8B60 /* DessertSearchService.swift */,
+				6DB04B7A2A475074002D8B60 /* DessertService.swift */,
 				6DB04B782A475006002D8B60 /* Models */,
 				6DB04B792A47500F002D8B60 /* Views */,
 				6DB04B7E2A476CEE002D8B60 /* Utilities */,
@@ -135,6 +135,8 @@
 			dependencies = (
 			);
 			name = "Fetch_iOSCodingChallenge (iOS)";
+			packageProductDependencies = (
+			);
 			productName = "Fetch_iOSCodingChallenge (iOS)";
 			productReference = 6DB04B5E2A474B2A002D8B60 /* Fetch_iOSCodingChallenge.app */;
 			productType = "com.apple.product-type.application";
@@ -183,6 +185,8 @@
 				Base,
 			);
 			mainGroup = 6DB04B512A474B28002D8B60;
+			packageReferences = (
+			);
 			productRefGroup = 6DB04B5F2A474B2A002D8B60 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -223,7 +227,7 @@
 				6DB04B862A4E5771002D8B60 /* DessertDetailView.swift in Sources */,
 				6DB04B7D2A4750DB002D8B60 /* Response.swift in Sources */,
 				6DB04B822A4BB59F002D8B60 /* DessertListView.swift in Sources */,
-				6DB04B7B2A475074002D8B60 /* DessertSearchService.swift in Sources */,
+				6DB04B7B2A475074002D8B60 /* DessertService.swift in Sources */,
 				6DB04B802A476D0A002D8B60 /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,6 +19,7 @@ struct Response: Codable {
 struct Dessert: Codable, Identifiable {
     let id: String?
     let title: String?
+    let thumbnail: String?
     var instruction: String?
     var ingredient1: String?
     var ingredient2: String?
@@ -64,6 +65,7 @@ struct Dessert: Codable, Identifiable {
     enum CodingKeys: String, CodingKey {
         case id = "idMeal"
         case title = "strMeal"
+        case thumbnail = "strMealThumb"
         case instruction = "strInstructions"
         case ingredient1 = "strIngredient1"
         case ingredient2 = "strIngredient2"

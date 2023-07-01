@@ -22,7 +22,7 @@ class DessertListViewModel: ObservableObject {
     
     //MARK: - Functions
     func fetchDesserts() {
-        DessertSearchService.shared.fetchDesserts()
+        DessertService.shared.fetchDesserts()
             .sink { completion in
                 switch completion {
                 case .failure(let error):
@@ -39,7 +39,7 @@ class DessertListViewModel: ObservableObject {
     
     func fetchDessertDetails(id: String?) {
         guard let id = id else { return }
-        DessertSearchService.shared.fetchDessertDetails(id: id)
+        DessertService.shared.fetchDessertDetails(id: id)
             .sink { completion in
                 switch completion {
                 case .failure(let error):

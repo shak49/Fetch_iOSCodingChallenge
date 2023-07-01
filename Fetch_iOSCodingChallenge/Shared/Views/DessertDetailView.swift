@@ -10,22 +10,40 @@ import SwiftUI
 struct DessertDetailView: View {
     //MARK: - Properties
     var id: String
+    var thumbnaile: String
     @ObservedObject var viewModel = DessertListViewModel()
     
     //MARK: - Lifecycles
     var body: some View {
         VStack {
-            Text(viewModel.dessert?.title ?? "Unavailable")
-                .font(.system(size: 32))
-                .bold()
-                .multilineTextAlignment(.center)
-                .padding(.leading, 32)
-                .padding(.trailing, 32)
+            VStack {
+                AsyncImage(url: URL(string: thumbnaile)) { phase in
+                    switch phase {
+                    case .empty:
+                        ProgressView("")
+                    case .success(let image):
+                        image.resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 150, height: 150)
+                            .clipShape(Circle())
+                            .padding(.bottom, 8)
+                    case .failure:
+                        Image(systemName: "placeholder-image")
+                    }
+                }
+                Text(viewModel.dessert?.title ?? "")
+                    .font(.system(size: 32))
+                    .bold()
+                    .multilineTextAlignment(.center)
+                    .padding([.leading, .trailing], 32)
+                    .padding(.bottom, 16)
+            }
+            .frame(maxWidth: .infinity)
+            .background(.regularMaterial)
             ScrollView {
                 Text(viewModel.dessert?.instruction ?? "")
                     .padding(.top, 16)
-                    .padding(.leading, 32)
-                    .padding(.trailing, 32)
+                    .padding([.leading, .trailing], 32)
                 VStack {
                     Group {
                         HStack {
@@ -192,9 +210,8 @@ struct DessertDetailView: View {
                         }
                     }
                 }
-                .padding(32)
+                .padding([.top, .leading, .trailing, .bottom], 32)
             }
-            Spacer()
         }
         .onAppear {
             viewModel.fetchDessertDetails(id: id)
@@ -204,6 +221,6 @@ struct DessertDetailView: View {
 
 struct DessertDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DessertDetailView(id: "")
+        DessertDetailView(id: "", thumbnaile: "")
     }
 }

@@ -10,6 +10,7 @@ SwiftUI / Combine / MVVM / Singleton / URLSession
     - DessertSearchService
         - fetchDesserts()
         - fetchDessertDetails(id: String?)
+        - fetchThumbnail(url: String?)
     
 - Models
     - Response
